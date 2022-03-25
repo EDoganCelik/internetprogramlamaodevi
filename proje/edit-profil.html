@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' href='css\index.css'>
+    <link rel='stylesheet' type='text/css' href='css\profil.css'>
+    <link rel='stylesheet' type='text/css' href='css\resim_yukle.css'>
+</head>
+
+<body>    
+    <a style="display: none;" id="goSite" href=""></a>
+
+    <div id="saveDialog">
+        <img class="logo" src="img/site-logo.png">
+        <h2 style="margin-top:7px;">Kayıt Başaralı</h2>
+        <button onclick="closePage('saveDialog')" class="upload button-style">Teşküürler</button>
+    </div>
+    <div class="header">
+        <i onclick="createBars()" class="fas fa-bars bars"></i>
+        <a id="icon" href="./index.html"><img style="height: 98%;" src="img/site-logo.png"></a>
+        <div style="display: flex; align-items: center;  position: relative;">
+            <i class="fas fa-search"></i>
+            <input id="searchText" type="text" class="search-input" name="search">
+            <i onclick="clearText('searchText')" id="clearText" class="fas fa-times"></i>
+        </div>
+        <form style="height: 100%; display: flex;  justify-content: space-around;   align-items: center;" action="#">
+            <a class="button-style" id="login" style="text-decoration: none; cursor: pointer; color: black;"
+                href="index.html">Anasayfa</a>
+            <a class="button-style" id="register" style="text-decoration: none; cursor: pointer; color: black;"
+                href="resim_yükle.html">Resim Yükle</a>
+        </form>
+    </div>
+    <div style="position: relative;" class="main">
+        <div id="leftPane" class="left-pane">
+            <button>Bunlar Sıradan Editor Aç</button>
+            <a onclick="changeFragment('fragment1')"><i class="fas fa-upload"></i></i>Profil Resmi</a>
+            <a onclick="changeFragment('fragment2')"><i class="fas fa-file-archive"></i>Açıklamam</a>
+            <a onclick="changeFragment('fragment3')"><i class="fas fa-eraser"></i>Hakkında</a>
+            <a onclick="changeFragment('fragment4')"><i class="fas fa-thumbs-up"></i>Sosyal Medya Hesaplarım</a>
+            <a style="text-decoration: none;" href="profil.html"><i class="fas fa-user"></i>Profilimi Görüntüle</a>
+
+        </div>
+        <div class="main-pane">
+            <div id="fragment1" class="fragment main-pane layout">
+                <div>
+                    <img src=pp/pp.jfif>
+                    <button style="margin-top: 15px; margin-bottom: 35px;" class="button-style">Resmi
+                        Değiştir</button>
+                    <div>Fotoğraflarınızı ResRes'e yükleyerek, ResRes Hizmet Şartları'nı ve Topluluk Kuralları'nı
+                        kabul etmiş olursunuz.
+                        Lütfen başkalarının telif veya gizlilik haklarını ihlal etmediğinizden emin olun. <a
+                            style="color: darkred; cursor: pointer; font-size: larger;">Daha fazla bilgi</a></div>
+
+                    <button style="margin-top:15px; margin-bottom: 35px;" class="button-style">Sorun mu
+                        var</button>
+                </div>
+
+            </div>
+            <div id="fragment2" class="fragment my-photo">
+
+                <label>Neler Hissediyorsun Anlat Bakalım</label>
+                <textarea
+                    placeholder="Ha buraya bişeyler yazaysun onlar veritabanımuza giduy sonra başkaları okayacak unutma paylaştığın şey ne işe yarıyor şu an bi tek sen biliyon"></textarea>
+                <button onclick="viewLoginPage('saveDialog')" class="upload button-style">Kaydet</button>
+
+            </div>
+            <div id="fragment3" class="fragment my-photo">
+                <label>Bildiklerin hakkında paylaşımda bulun yeteneklerin neler?</label>
+                <textarea
+                    placeholder="Ha buraya bişeyler yazaysun onlar veritabanımuza giduy sonra başkaları okayacak unutma paylaştığın şey ne işe yarıyor şu an bi tek sen biliyon"></textarea>
+                <button onclick="viewLoginPage('saveDialog')" class="upload button-style">Kaydet</button>
+
+                <button style="margin-top: 25px;" class="upload button-style">Sertifika Yükle</button>
+                <div class="cert">
+                    <div class="my-cert">
+                        <div>Udemy Java Sertifikası</div>
+                        <button class=" button-style">Sertifikayı Göster</button>
+
+                    </div>
+                    <div class="my-cert">
+                        <div>Udemy Java Sertifikası</div>
+                        <button class=" button-style">Sertifikayı Göster</button>
+
+                    </div>
+                    <div class="my-cert">
+                        <div>Udemy Java Sertifikası</div>
+                        <button class=" button-style">Sertifikayı Göster</button>
+
+                    </div>
+
+                </div>
+            </div>
+            <div id="fragment4" class="fragment my-photo">
+                <label>Facebook</label>
+                <input type="text" placeholder="Hesap Adı" name="baslik-adi">
+                <label>Youtube</label>
+                <input type="text" placeholder="Hesap Adı" name="baslik-adi">
+                <label>Linkedin</label>
+                <input type="text" placeholder="Hesap Adı" name="baslik-adi">
+                <label>Twitter</label>
+                <input type="text" placeholder="Hesap Adı" name="baslik-adi">
+                <label>İnstagram</label>
+                <input type="text" placeholder="Hesap Adı" name="baslik-adi">
+                <button onclick="viewLoginPage('saveDialog')" class="upload button-style">Kaydet</button>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/157dbdbd32.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+    <script src="js/fragment.js"></script>
+
+    <!--  
+            <i class="fab fa-facebook-f">
+                        <div class="social-info">Emre Doğan Çelik</div>
+                    </i>
+                    <i class="fab fa-youtube">
+                        <div class="social-info">Emre Doğan Çelik</div>
+                    </i>
+                    <i class="fab fa-linkedin">
+                        <div class="social-info">Emre Doğan Çelik</div>
+                    </i>
+                    <i class="fab fa-twitter">
+                        <div class="social-info">Emre Doğan Çelik</div>
+                    </i>
+                    <i class="fab fa-instagram">
+                        <div class="social-info">Emre Doğan Çelik</div>
+                    </i>  
+        <div class="img-test">
+            <img class="img-photo" src="img/loading.gif">
+            <a href="#" class="text a-decor">
+                <span>Devamını Oku </span> 
+                </a>
+        </div>-->
+
+</body>
+
+
+</html>

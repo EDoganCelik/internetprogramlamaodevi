@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Paper , Live Wallpaper</title>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    </head>
+    <body class="loaded" onload="createRainbow()">   
+         <a style="display: none;" id="goSite" href=""></a>
+
+  
+        <main id="main">
+            <div class="upper-content">
+               
+                <span><img src="img/site-logo.png"></span>
+                <div> 
+                     
+                <ul class="menu">
+                    <li>
+                       <a href="#">Editör</a>
+                    </li>
+                    <li>
+                        <a href="#">İş İmkanı</a>
+                    </li>
+                    <li><a href="#"> Hakkında</a></li>
+                </ul> 
+                
+                <button class="button-style" onclick="viewLoginPage('login-page')" id="login">
+                    Giriş yap
+                </button>
+                <button class="button-style" onclick="viewLoginPage('register-page')" id="register">
+                    Kaydol
+                </button> </div>
+            
+            </div>
+            <div class="mid">
+                <div>Senin Tarzın</div>
+                <div>  <span id="rainbow"> Senin Renklerin</span></div>
+            </div>
+            <div class="imgs">
+                
+                <img class="inner-img" id="img1"    src="img/bg1.jpg">
+                <img class="inner-img" id="img2"   src="img/bg2.jpg">
+                <img class="inner-img"  id="img3" src="img/bg4.jpg">
+                <img class="inner-img" id="img4"  src="img/bg3.jpg">
+                <img class="inner-img" id="img5"   src="img/bg5.jpg">
+                <img class="inner-img" id="img6"   src="img/bg1.jpg">
+                <img class="inner-img" id="img7"  src="img/bg2.jpg">
+             </div>
+            
+        </main>
+        <div id="backpage" style="width: 100%; height: 100%; top: 0; position: fixed; display: none;">
+            <div id="login-page" class="logreg-page" style="display:none;">
+                <div id="close" onclick="closePage('login-page')">X</div>
+                <div>
+                    <img class="logo" src="img/site-logo.png">
+                <h2 style="margin-top:7px;">ResRes'e Hoş Geldin</h2>
+                <h4 style="margin:7px;">Hayallerini Gerçekleştir</h4>
+                </div>
+    
+                 <input class="log-input" id="user-input2" type="text" placeholder="User Name"> 
+                 <input class="log-input" id="pass-input2" placeholder="Password" type="password">
+                  <a id="continue" style="text-decoration: none; " href="index.html">Giriş yap</a> 
+             <div>
+                Devam ederek ResRes'in Hizmet Şartları koşullarını kabul eder ve Gizlilik Politikası metnini okuduğunuzu onaylamış olursunuz
+            </div>    
+            </div>
+            <div style="display:none" id="info-page">
+                <div id="inner-text">Hayat Paylaşınca Güzel</div>
+                <div id="gallery">
+                    <img class="gal-img" src="img/bg1.jpg">
+                    <img class="gal-img" src="img/bg2.jpg">
+                    <img class="gal-img" src="img/bg3.jpg">
+                    <img class="gal-img" src="img/bg4.jpg">
+                    <img class="gal-img" src="img/bg5.jpg">
+                </div>
+            </div>
+            <div id="register-page" class="logreg-page" style="display:none;">
+                <div id="close"  onclick="closePage('register-page')">X</div>
+                <div style="text-align: center;">
+                    <img class="logo" src="img/site-logo.png">
+                <h2 style="margin-top:7px;">ResRes'e Hoş Geldin</h2>
+                <h4 style="margin:7px;">Hayallerini Gerçekleştir</h4>
+                </div>
+    
+                 <input class="log-input" id="user-input" type="text" placeholder="User Name"> 
+                 <input class="log-input" id="pass-input" placeholder="Password" type="password">
+                 <a id="continue" style="text-decoration: none; " href="resim_yükle.html">Kayıt Ol</a> 
+                 <div style="text-align: center;">
+                Devam ederek ResRes'in Hizmet Şartları koşullarını kabul eder ve <a>Gizlilik Politikası metnini</a> okuduğunuzu onaylamış olursunuz
+            </div>    
+            </div>
+        </div>
+        <script src="js/main.js"></script>
+        
+    </body>
+     
+    
+</html>

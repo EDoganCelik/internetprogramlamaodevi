@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="css/index.css">
+    <meta charset="UTF-8">
+    <link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet'>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body onload="createLike()">
+    <a style="display: none;" id="goSite" href=""></a>
+    <div class="header">
+        <i onclick="createBars()" class="fas fa-bars bars"></i>
+        <a id="icon" href="index.html"><img style="height: 98%;" src="img/site-logo.png"></a>
+        <div style="display: flex; align-items: center;  position: relative;">
+            <i class="fas fa-search"></i>
+            <input id="searchText" type="text" class="search-input" name="search">
+            <i onclick="clearText('searchText')" id="clearText" class="fas fa-times"></i>
+        </div>
+        <form style="height: 100%; display: flex;  justify-content: space-around;   align-items: center;">
+            <a class="button-style" id="login" style="text-decoration: none; cursor: pointer; color: black;"
+                href="resim_yükle.html">Resim Yükle</a>
+            <a class="button-style" id="register" style="text-decoration: none; cursor: pointer; color: black;"
+                href="edit-profil.html">Profili Düzenle</a>
+        </form>
+    </div>
+    <div style="position: relative;" class="main">
+        <div id="leftPane" class="left-pane">
+            <button style="font-weight: 800; font-family: Muli;">Bunlar Sıradan Editor Aç</button>
+            <a><i class="fas fa-mountain"></i>Manzara</a>
+            <a><i class="fas fa-camera"></i>Fotoğraf</a>
+            <a><i class="fas fa-location-arrow"></i>Anime</a>
+            <a><i class="fas fa-location-arrow"></i>Futbol</a>
+            <a><i class="fas fa-location-arrow"></i>Piano</a>
+            <a><i class="fas fa-location-arrow"></i>Kodlama</a>
+            <a><i class="fas fa-location-arrow"></i>Sakin</a>
+            <a><i class="fas fa-location-arrow"></i>Gökkuşağı</a>
+            <a><i class="fas fa-location-arrow"></i>Üniversite</a>
+            <a><i class="fas fa-location-arrow"></i>Beğenilmeye göre sırala</a>
+            <a><i class="fas fa-location-arrow"></i>Çözünürlüğe göre sırala</a>
+        </div>
+        <div class="main-pane">
+            <div class="kare"><img class="img-photo" src="img/bg1.jpg">
+                <div><button class="button-style" onclick="goSite('resimler/resim.html')">Ben bunu istiyom</button>
+                </div>
+            </div>
+            <div class="kare"><img class="img-photo" src="img/bg3.jpg">
+                <div><button class="button-style ">Ben bunu istiyom</button></div>
+            </div>
+            <div class="kare"><img class="img-photo" src="img/bg4.jpg">
+                <div><button class="button-style ">Ben bunu istiyom</button></div>
+            </div>
+            <div class="kare"><img class="loading-photo" src="img/loading.gif">
+                <div><button class="button-style ">Ben bunu istiyom</button></div>
+            </div>
+            <div class="kare"><img class="loading-photo" src="img/loading.gif">
+                <div><button class="button-style ">Ben bunu istiyom</button></div>
+            </div>
+            <div class="kare"><img class="loading-photo" src="img/loading.gif">
+                <div><button class="button-style ">Ben bunu istiyom</button></div>
+            </div>
+            <div class="kare"><img class="img-photo" src="img/bg2.jpg">
+                <div><button class="button-style ">Ben bunu istiyom</button></div>
+            </div>
+            <div class="kare"><img class="loading-photo" src="img/loading.gif">
+                <div><button class="button-style ">Ben bunu istiyom</button></div>
+            </div>
+            <div class="kare"><img class="loading-photo" src="img/loading.gif">
+                <div><button class="button-style ">Ben bunu istiyom</button></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/157dbdbd32.js" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+
+    <!--    
+        <div class="img-test">
+            <img class="img-photo" src="img/loading.gif">
+            <a href="#" class="text a-decor">
+                <span>Devamını Oku </span> 
+                </a>
+        </div>-->
+
+</body>
+
+</html>
