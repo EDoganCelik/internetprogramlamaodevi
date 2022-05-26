@@ -1,0 +1,61 @@
+<body onload="createLike()">
+    <a style="display: none;" id="goSite" href=""></a>
+    <div class="header">
+        <i onclick="createBars()" class="fas fa-bars bars"></i>
+        <a id="icon" href="./images"><img style="height: 98%;" src="img/site-logo.png"></a>
+        <div class="search-div" style="display: flex; align-items: center;  position: relative;">
+            <i class="fas fa-search"></i>
+            <input form="form" id="searchText" type="text" class="search-input" name="search">
+            <i onclick="clearText('searchText')" id="clearText" class="fas fa-times"></i>
+        </div>
+        <form style="display: none;" id="form" action="/images" method="get"></form>
+        <form style="height: 100%; display: flex;  justify-content: space-around;   align-items: center;">
+            <a class="button-style" id="login" style="text-decoration: none; cursor: pointer; color: black;"
+                href="/upImage">Resim Yükle</a>
+            <a class="button-style" id="register" style="text-decoration: none; cursor: pointer; color: black;"
+                href="/edit-profil">Profili Düzenle</a>
+         
+
+        </form>
+    </div>
+    <div style="position: relative;" class="main">
+        <div id="leftPane" class="left-pane">
+            <button style="font-weight: 800; font-family: Muli;">Bunlar Sıradan Editor Aç</button>
+            <a href="/logout"><i class="fas fa-sign-out-alt"></i>Çıkış Yap</a>
+            <a href="./images?resim=Manzara"><i class="fas fa-mountain"></i>Manzara</a>
+            <a href="./images?resim=Fotoğraf"><i class="fas fa-camera"></i>Fotoğraf</a>
+            <a href="./images?resim=Anime"><i class="fas fa-location-arrow"></i>Anime</a>
+            <a href="./images?resim=Futbol"><i class="fas fa-location-arrow"></i>Futbol</a>
+            <a href="./images?resim=Piyano"><i class="fas fa-location-arrow"></i>Piyano</a>
+            <a href="./images?resim=Kodlama"><i class="fas fa-location-arrow"></i>Kodlama</a>
+            <a href="./images?resim=Sakin"><i class="fas fa-location-arrow"></i>Sakin</a>
+            <a href="./images?resim=Gökkuşağı"><i class="fas fa-location-arrow"></i>Gökkuşağı</a>
+            <a href="./images?resim=Üniversite"><i class="fas fa-location-arrow"></i>Üniversite</a>
+            <a href="./images?resim=duvar"><i class="fas fa-location-arrow"></i>Duvar</a>
+            <a href="./images?resim=bgs"><i class="fas fa-location-arrow"></i>Beğenilmeye göre sırala</a>
+            <a href="./images?resim=cgs"><i class="fas fa-location-arrow"></i>Çözünürlüğe göre sırala</a>
+        </div>
+        <div class="main-pane">
+            <% models.forEach(element=> { %>
+                <div class="kare">
+                    <img class="img-photo" src=<%-"img/"+ element.resim %> >
+                    <div>
+                        <a class="button-style" href=<%-"image?id="+element._id%> >Ben bunu istiyom</a>
+                    </div>
+                </div>
+                <% }) %>
+        </div>
+    </div>
+
+    <script src=" https://kit.fontawesome.com/157dbdbd32.js" crossorigin="anonymous"></script>
+                            <script src="js/index.js"></script>
+
+                            <!--    
+        <div class="img-test">
+            <img class="img-photo" src="img/loading.gif">
+            <a href="#" class="text a-decor">
+                <span>Devamını Oku </span> 
+                </a>
+        </div>-->
+
+</body>
